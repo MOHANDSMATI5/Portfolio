@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Expériences - SMATI MOHAND</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .navbar {
+            background-color: #ff6200;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: #ffd700 !important;
+        }
+        .nav-link.active {
+            color: #ffd700 !important;
+            font-weight: 600;
+        }
+        .header-section {
+            background: linear-gradient(135deg, #ff6200, #ff8c00);
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .header-section h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .header-section p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background-color: #fff;
+            border-color: #fff;
+            color: #ff6200;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #e65c00;
+            border-color: #e65c00;
+            color: #fff;
+        }
+        .section-title {
+            color: #ff6200;
+            font-weight: 600;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .contact-section {
+            background-color: #fff;
+            padding: 50px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        .project-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #ff6200;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            color: #fff;
+        }
+        .social-icons i {
+            font-size: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .header-section h1 {
+                font-size: 2rem;
+            }
+            .header-section p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">SMATI MOHAND</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="experiences.html">Mes Expériences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="education.html">Formation</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="header-section">
+        <div class="container">
+            <h1>SMATI MOHAND</h1>
+            <p>Développeur Full Stack en recherche d'une alternance pour septembre 2025</p>
+            <a href="#contact" class="btn btn-primary btn-lg">Contactez-moi</a>
+        </div>
+    </section>
+
+    <section id="experiences" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Mes Expériences</h2>
+            <h3 class="section-title">Expériences Académiques</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h4>Application Web de Gestion de Restaurant</h4>
+                        <p><strong>Février 2025 - Institut Golden Collar, Paris</strong></p>
+                        <ul>
+                            <li>Rédaction du cahier des charges pour structurer le projet.</li>
+                            <li>Développement d’interfaces utilisateur responsives avec React.</li>
+                            <li>Conception du back-end avec PHP (Laravel) et MySQL.</li>
+                            <li>Implémentation des fonctionnalités : menu, panier, paiement.</li>
+                        </ul>
+                        <p><strong>Technologies</strong>: React, PHP, Laravel, MySQL</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h4>Site Vitrine pour le Chanteur Idir</h4>
+                        <p><strong>Octobre 2024 - Décembre 2024, Institut Golden Collar, Paris</strong></p>
+                        <ul>
+                            <li>Développement d’une interface responsive avec Bootstrap.</li>
+                            <li>Intégration d’une API Google Maps pour l’affichage interactif.</li>
+                            <li>Déploiement du site (<a href="https://projet-idir.fr" target="_blank">projet-idir.fr</a>).</li>
+                        </ul>
+                        <p><strong>Technologies</strong>: Bootstrap, JavaScript, Google Maps API</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h4>Application Web de Gestion de Séries et Films</h4>
+                        <p><strong>Octobre 2023 - Décembre 2023, Université de Lyon 1</strong></p>
+                        <ul>
+                            <li>Conception selon l’architecture MVC avec Python.</li>
+                            <li>Utilisation de Jinja pour les templates HTML.</li>
+                            <li>Intégration d’une base de données PostgreSQL via Psycopg.</li>
+                        </ul>
+                        <p><strong>Technologies</strong>: Python, Jinja, PostgreSQL, MVC</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h4>Cours Particuliers en Programmation</h4>
+                        <p><strong>Novembre 2022 - Juin 2023, Indépendant, Perpignan</strong></p>
+                        <ul>
+                            <li>Enseignement de l’algorithmique et des langages Python et C.</li>
+                            <li>Modélisation de bases de données (MCD, MLD) avec SQL.</li>
+                            <li>Explication des diagrammes UML pour la conception.</li>
+                            <li>Analyse mathématique pour les étudiants de L1.</li>
+                        </ul>
+                        <p><strong>Technologies</strong>: Python, C, SQL, UML</p>
+                    </div>
+                </div>
+            </div>
+            <h3 class="section-title">Expériences Non-Académiques</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h4>Commis Plongeur – Restaurant Spécialisé en Fruits de Mer</h4>
+                        <p><strong>Juillet 2024 - Décembre 2024, WOWCRAB, Paris</strong></p>
+                        <ul>
+                            <li>Lavage de la vaisselle.</li>
+                            <li>Aide à la préparation des plats.</li>
+                            <li>Assistance à la cuisson.</li>
+                            <li>Rangement et gestion des stocks.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h4>Plongeur – Cantine d'École Primaire</h4>
+                        <p><strong>Janvier 2023 - Mai 2023, SHCB, Lyon</strong></p>
+                        <ul>
+                            <li>Lavage de la vaisselle, couverts et ustensiles.</li>
+                            <li>Nettoyage des équipements et plans de travail.</li>
+                            <li>Désinfection des surfaces et sols selon les normes d’hygiène.</li>
+                            <li>Aide à la mise en place et au débarrassage.</li>
+                            <li>Gestion des poubelles et tri des déchets.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h4>Commis Plongeur en Restauration</h4>
+                        <p><strong>Avril 2023 - Septembre 2023, Hôtels Les Roches Brunes, Collioure</strong></p>
+                        <ul>
+                            <li>Épluchage des légumes et fruits.</li>
+                            <li>Dressage des plats pour le service.</li>
+                            <li>Lavage de la vaisselle et ustensiles.</li>
+                            <li>Nettoyage et entretien des espaces de travail.</li>
+                            <li>Désinfection des poubelles.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h4>Valet de Chambre</h4>
+                        <p><strong>Octobre 2022 - Février 2023, Hôtel Font-Romeu-Odeillo-Via</strong></p>
+                        <ul>
+                            <li>Nettoyage à blanc et en recouche des chambres.</li>
+                            <li>Nettoyage du mobilier, sols, salles de bains et sanitaires.</li>
+                            <li>Approvisionnement et remplacement du linge.</li>
+                            <li>Vérification de la propreté et du bon état des chambres.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contactez-moi</h2>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <form action="https://formspree.io/f/xnndbvjr" method="POST" autocomplete="off" data-formspree-redirect="confirmation.html">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nom</label>
+                            <input type="text" class="form-control" id="name" name="Nom" required autocomplete="off">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="Email" required autocomplete="off">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </form>
+                    <p class="mt-3">Ou contactez-moi via : <a href="https://github.com/MOHANDSMATI5" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/mohand-smati-b1ba4a260/" target="_blank">LinkedIn</a> | <a href="mailto:smatimohand37@gmail.com" target="_blank">smatimohand37@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 - SMATI MOHAND. Tous droits réservés.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/smati.mouhand.58" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/smatimhend/?next=%2F" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/mohand-smati-b1ba4a260/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = '#e65c00';
+            } else {
+                navbar.style.backgroundColor = '#ff6200';
+            }
+        });
+    </script>
+</body>
+</html>

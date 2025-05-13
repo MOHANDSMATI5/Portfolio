@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation - SMATI MOHAND</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .navbar {
+            background-color: #ff6200;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: #ffd700 !important;
+        }
+        .nav-link.active {
+            color: #ffd700 !important;
+            font-weight: 600;
+        }
+        .header-section {
+            background: linear-gradient(135deg, #ff6200, #ff8c00);
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .header-section h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .header-section p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background-color: #fff;
+            border-color: #fff;
+            color: #ff6200;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #e65c00;
+            border-color: #e65c00;
+            color: #fff;
+        }
+        .section-title {
+            color: #ff6200;
+            font-weight: 600;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .contact-section {
+            background-color: #fff;
+            padding: 50px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        .education-timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        .education-timeline::before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #ff6200;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .education-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .education-item::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff6200;
+            border-radius: 50%;
+            top: 20px;
+            left: -30px;
+        }
+        footer {
+            background-color: #ff6200;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            color: #fff;
+        }
+        .social-icons i {
+            font-size: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .header-section h1 {
+                font-size: 2rem;
+            }
+            .header-section p {
+                font-size: 1rem;
+            }
+            .education-timeline::before {
+                left: 20px;
+            }
+            .education-item::before {
+                left: -10px;
+            }
+            .education-item {
+                margin-left: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">SMATI MOHAND</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experiences.html">Mes Expériences</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="education.html">Formation</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="header-section">
+        <div class="container">
+            <h1>SMATI MOHAND</h1>
+            <p>Développeur Full Stack en recherche d'une alternance pour septembre 2025</p>
+            <a href="#contact" class="btn btn-primary btn-lg">Contactez-moi</a>
+        </div>
+    </section>
+
+    <section id="education" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Formation</h2>
+            <div class="education-timeline">
+                <div class="education-item">
+                    <h4>Master 1 Développement Web</h4>
+                    <p><strong>Octobre 2024 - Présent, Institut Golden Collar, Paris</strong></p>
+                    <p>Formation spécialisée en développement full stack, avec un focus sur les technologies web modernes et la conception d’applications évolutives.</p>
+                    <p><strong>Acquisitions :</strong></p>
+                    <ul>
+                        <li>Maîtrise de frameworks comme Laravel et React pour le développement full stack.</li>
+                        <li>Conception d’API RESTful et gestion de bases de données MySQL.</li>
+                        <li>Utilisation de Git, Trello, et méthodologies agiles.</li>
+                        <li>Développement d’interfaces responsives avec Bootstrap et CSS.</li>
+                    </ul>
+                </div>
+                <div class="education-item">
+                    <h4>Licence en Informatique</h4>
+                    <p><strong>Septembre 2023 - Juin 2024, Université Claude Bernard Lyon 1</strong></p>
+                    <p>Approfondissement des concepts de développement logiciel, bases de données, et architectures logicielles.</p>
+                    <p><strong>Acquisitions :</strong></p>
+                    <ul>
+                        <li>Programmation avancée en Python et JavaScript.</li>
+                        <li>Conception de bases de données PostgreSQL avec Psycopg.</li>
+                        <li>Utilisation de l’architecture MVC.</li>
+                        <li>Introduction aux tests unitaires et intégration continue.</li>
+                    </ul>
+                </div>
+                <div class="education-item">
+                    <h4>Licence en Mathématiques</h4>
+                    <p><strong>Septembre 2022 - Juin 2023, Université de Perpignan Via Domitia</strong></p>
+                    <p>Acquisition de compétences en analyse mathématique et logique, applicables à l’informatique.</p>
+                    <p><strong>Acquisitions :</strong></p>
+                    <ul>
+                        <li>Optimisation d’algorithmes via l’analyse mathématique.</li>
+                        <li>Logique formelle pour la modélisation de systèmes.</li>
+                        <li>Résolution de problèmes complexes.</li>
+                        <li>Applications en cryptographie et science des données.</li>
+                    </ul>
+                </div>
+                <div class="education-item">
+                    <h4>Licence en Informatique</h4>
+                    <p><strong>Septembre 2019 - Juin 2022, Université Abderrahmane Mira, Béjaïa, Algérie</strong></p>
+                    <p>Formation initiale en informatique, couvrant programmation, systèmes, et réseaux.</p>
+                    <p><strong>Acquisitions :</strong></p>
+                    <ul>
+                        <li>Programmation en C et Python.</li>
+                        <li>Compréhension des systèmes Linux et Windows.</li>
+                        <li>Modélisation de bases de données SQL.</li>
+                        <li>Introduction aux réseaux et sécurité.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contactez-moi</h2>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <form action="https://formspree.io/f/xnndbvjr" method="POST" autocomplete="off" data-formspree-redirect="confirmation.html">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nom</label>
+                            <input type="text" class="form-control" id="name" name="Nom" required autocomplete="off">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="Email" required autocomplete="off">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </form>
+                    <p class="mt-3">Ou contactez-moi via : <a href="https://github.com/MOHANDSMATI5" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/mohand-smati-b1ba4a260/" target="_blank">LinkedIn</a> | <a href="mailto:smatimohand37@gmail.com" target="_blank">smatimohand37@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 - SMATI MOHAND. Tous droits réservés.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/smati.mouhand.58" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/smatimhend/?next=%2F" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/mohand-smati-b1ba4a260/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = '#e65c00';
+            } else {
+                navbar.style.backgroundColor = '#ff6200';
+            }
+        });
+    </script>
+</body>
+</html>
