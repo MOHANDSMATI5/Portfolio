@@ -67,17 +67,93 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             margin-top: 50px;
         }
+        .experience-section {
+            padding: 60px 0;
+        }
         .project-card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
+            background: linear-gradient(145deg, #ffffff, #f9f9f9);
+            border: none;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .project-card.academic {
+            border-left: 5px solid #ff6200;
+        }
+        .project-card.non-academic {
+            border-left: 5px solid #ffd700;
         }
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: scale(1.03);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        .project-card h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ff6200;
+            margin-bottom: 10px;
+        }
+        .project-card p.date {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .project-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+        .project-card ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .project-card ul li::before {
+            content: '\f058';
+            font-family: 'bootstrap-icons';
+            position: absolute;
+            left: 0;
+            color: #ff6200;
+            font-size: 1rem;
+        }
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .tech-tag {
+            background-color: #296a2a;
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .project-link {
+            display: inline-block;
+            background-color: #296a2a;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .project-link:hover {
+            background-color: #e65c00;
+        }
+        .divider {
+            height: 3px;
+            background-color: #ff6200;
+            width: 100px;
+            margin: 40px auto;
         }
         footer {
             background-color: #ff6200;
@@ -96,12 +172,25 @@
         .social-icons i {
             font-size: 1.5rem;
         }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
         @media (max-width: 768px) {
             .header-section h1 {
                 font-size: 2rem;
             }
             .header-section p {
                 font-size: 1rem;
+            }
+            .project-card h4 {
+                font-size: 1.3rem;
+            }
+            .project-card {
+                padding: 20px;
+            }
+            .project-card ul li {
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -131,68 +220,122 @@
         </div>
     </section>
 
-    <section id="experiences" class="py-5 bg-light">
+    <section id="experiences" class="experience-section bg-light">
         <div class="container">
             <h2 class="section-title">Mes Expériences</h2>
             <h3 class="section-title">Expériences Académiques</h3>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="project-card">
+                    <div class="project-card academic">
                         <h4>Application Web de Gestion de Restaurant</h4>
-                        <p><strong>Février 2025 - Institut Golden Collar, Paris</strong></p>
+                        <p class="date"><strong> Depuis Février 2025 - Institut Golden Collar, Paris</strong></p>
                         <ul>
                             <li>Rédaction du cahier des charges pour structurer le projet.</li>
                             <li>Développement d’interfaces utilisateur responsives avec React.</li>
                             <li>Conception du back-end avec PHP (Laravel) et MySQL.</li>
                             <li>Implémentation des fonctionnalités : menu, panier, paiement.</li>
                         </ul>
-                        <p><strong>Technologies</strong>: React, PHP, Laravel, MySQL</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="project-card">
+                    <div class="project-card academic">
+                        <h4>Stagiaire – Développeur Web Full Stack (à distance)</h4>
+                        <p class="date"><strong>Janvier 2025 - Avril 2025, KLeer INFINI, Blida, Algérie</strong></p>
+                        <ul>
+                            <li>Contribution à la rédaction et conception du design avec Figma.</li>
+                            <li>Développement d’interfaces utilisateur (client, producteur, administrateur) avec Angular pour un site B2B.</li>
+                            <li>Conception du back-end avec Node.js.</li>
+                            <li>Gestion de bases de données PostgreSQL.</li>
+                            <li>Création et gestion d’API RESTful.</li>
+                            <li>Écriture de tests unitaires et d’intégration.</li>
+                            <li>Mise en production de l’application web.</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Figma</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card academic">
                         <h4>Site Vitrine pour le Chanteur Idir</h4>
-                        <p><strong>Octobre 2024 - Décembre 2024, Institut Golden Collar, Paris</strong></p>
+                        <p class="date"><strong>Octobre 2024 - Décembre 2024, Institut Golden Collar, Paris</strong></p>
                         <ul>
                             <li>Développement d’une interface responsive avec Bootstrap.</li>
                             <li>Intégration d’une API Google Maps pour l’affichage interactif.</li>
-                            <li>Déploiement du site (<a href="https://projet-idir.fr" target="_blank">projet-idir.fr</a>).</li>
+                            <li>Déploiement du site.</li>
                         </ul>
-                        <p><strong>Technologies</strong>: Bootstrap, JavaScript, Google Maps API</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Google Maps API</span>
+                        </div>
+                        <a href="https://projet-idir.fr" target="_blank" class="project-link">Clicker ici</a>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="project-card">
+                    <div class="project-card academic">
                         <h4>Application Web de Gestion de Séries et Films</h4>
-                        <p><strong>Octobre 2023 - Décembre 2023, Université de Lyon 1</strong></p>
+                        <p class="date"><strong>Octobre 2023 - Décembre 2023, Université de Lyon 1</strong></p>
                         <ul>
                             <li>Conception selon l’architecture MVC avec Python.</li>
                             <li>Utilisation de Jinja pour les templates HTML.</li>
                             <li>Intégration d’une base de données PostgreSQL via Psycopg.</li>
                         </ul>
-                        <p><strong>Technologies</strong>: Python, Jinja, PostgreSQL, MVC</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Jinja</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">MVC</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="project-card">
+                    <div class="project-card academic">
                         <h4>Cours Particuliers en Programmation</h4>
-                        <p><strong>Novembre 2022 - Juin 2023, Indépendant, Perpignan</strong></p>
+                        <p class="date"><strong>Novembre 2022 - Juin 2023, Indépendant, Perpignan</strong></p>
                         <ul>
                             <li>Enseignement de l’algorithmique et des langages Python et C.</li>
                             <li>Modélisation de bases de données (MCD, MLD) avec SQL.</li>
                             <li>Explication des diagrammes UML pour la conception.</li>
                             <li>Analyse mathématique pour les étudiants de L1.</li>
                         </ul>
-                        <p><strong>Technologies</strong>: Python, C, SQL, UML</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">UML,MCD,MLD</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <h3 class="section-title">Expériences Non-Académiques</h3>
+            <div class="divider"></div>
+            <h3 class="section-title">Expériences Non-Académiques (Job etudiant)</h3>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="project-card">
+                    <div class="project-card non-academic">
+                        <h4>Livreur</h4>
+                        <p class="date"><strong>Janvier 2025 - Avril 2025, Paris, France</strong></p>
+                        <ul>
+                            <li>Livraison de colis et repas à domicile dans Paris.</li>
+                            <li>Gestion des itinéraires pour optimiser les délais de livraison.</li>
+                            <li>Interaction avec les clients pour assurer un service de qualité.</li>
+                            <li>Vérification des commandes avant livraison.</li>
+                            <li>Respect des normes de sécurité et d’hygiène.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card non-academic">
                         <h4>Commis Plongeur – Restaurant Spécialisé en Fruits de Mer</h4>
-                        <p><strong>Juillet 2024 - Décembre 2024, WOWCRAB, Paris</strong></p>
+                        <p class="date"><strong>Juillet 2024 - Décembre 2024, WOWCRAB, Paris</strong></p>
                         <ul>
                             <li>Lavage de la vaisselle.</li>
                             <li>Aide à la préparation des plats.</li>
@@ -202,9 +345,9 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="project-card">
+                    <div class="project-card non-academic">
                         <h4>Plongeur – Cantine d'École Primaire</h4>
-                        <p><strong>Janvier 2023 - Mai 2023, SHCB, Lyon</strong></p>
+                        <p class="date"><strong>Janvier 2024 - Mai 2024, SHCB, Lyon</strong></p>
                         <ul>
                             <li>Lavage de la vaisselle, couverts et ustensiles.</li>
                             <li>Nettoyage des équipements et plans de travail.</li>
@@ -215,9 +358,9 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="project-card">
+                    <div class="project-card non-academic">
                         <h4>Commis Plongeur en Restauration</h4>
-                        <p><strong>Avril 2023 - Septembre 2023, Hôtels Les Roches Brunes, Collioure</strong></p>
+                        <p class="date"><strong>Avril 2023 - Septembre 2023, Hôtels Les Roches Brunes, Collioure</strong></p>
                         <ul>
                             <li>Épluchage des légumes et fruits.</li>
                             <li>Dressage des plats pour le service.</li>
@@ -228,9 +371,9 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="project-card">
+                    <div class="project-card non-academic">
                         <h4>Valet de Chambre</h4>
-                        <p><strong>Octobre 2022 - Février 2023, Hôtel Font-Romeu-Odeillo-Via</strong></p>
+                        <p class="date"><strong>Octobre 2022 - Février 2023, Hôtel Font-Romeu-Odeillo-Via</strong></p>
                         <ul>
                             <li>Nettoyage à blanc et en recouche des chambres.</li>
                             <li>Nettoyage du mobilier, sols, salles de bains et sanitaires.</li>
@@ -239,8 +382,24 @@
                         </ul>
                     </div>
                 </div>
+                <div class="col-md-6">
+                    <div class="project-card non-academic">
+                        <h4>Employé de commerce – Supermarché d'alimentation générale</h4>
+                        <p class="date"><strong>Septembre 2018 - Août 2022, Bejaïa, Algérie</strong></p>
+                        <ul>
+                            <li>Accueil et conseil client.</li>
+                            <li>Mise en rayon.</li>
+                            <li>Réception, rangement et approvisionnement des rayons, gestion de l’inventaire.</li>
+                            <li>Tenir la caisse, effectuer les encaissements et gérer les retours clients.</li>
+                            <li>Entretien de l’espace de vente.</li>
+                            <li>Respect des normes d’hygiène.</li>
+                        </ul>
+                    </div>
+                </div>
+                
             </div>
         </div>
+                
     </section>
 
     <section id="contact" class="contact-section">
